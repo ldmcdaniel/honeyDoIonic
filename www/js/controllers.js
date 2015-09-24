@@ -6,7 +6,7 @@ angular.module('honeyDo.controllers', [])
     $http.get('/api/todos/')
       .success(function(data) {
         $scope.todos = data;
-        console.log(data);
+        console.log($scope.todos[2].todo[0].group);
       })
       .error(function(data) {
         console.log('Error: ' + data);
