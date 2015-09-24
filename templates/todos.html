@@ -1,0 +1,17 @@
+<ion-view view-title="Todos">
+  <ion-content>
+<!--     <div class="list list-inset" ng-repeat="group in groups | orderBy: 'name'">
+      <div class="item">
+        <a ng-click="getGroup()" href="#/app/myGroups/{{group._id}}">{{group.name}}</a>
+      </div>
+    </div>
+ -->    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" placeholder="Grouping" ng-model="$parent.formData.todo.group" required>
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Task" ng-model="$parent.formData.todo.task" required>
+      </label>
+      <button class="button button-block button-positive" ng-click="createTodo()">Create Task</button>
+    </div>  </ion-content>
+</ion-view>
