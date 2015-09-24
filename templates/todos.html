@@ -1,17 +1,24 @@
 <ion-view view-title="Todos">
   <ion-content>
-<!--     <div class="list list-inset" ng-repeat="group in groups | orderBy: 'name'">
-      <div class="item">
-        <a ng-click="getGroup()" href="#/app/myGroups/{{group._id}}">{{group.name}}</a>
-      </div>
-    </div>
- -->    <div class="list list-inset">
-      <label class="item item-input">
+    <ul class="list">
+<!--       <li class="item item-divider" ng-repeat="todo in todos | orderBy: 'todo[0].group'">
+        Group: {{todo.todo[0].group}}
+      </li> -->
+      <li class="item item-checkbox" ng-repeat="todo in todos | orderBy: 'todo[0].task'">
+        <label class="checkbox">
+          <input type="checkbox" ng-click="deleteTodo(todo._id)">
+        </label>
+        {{todo.todo[0].task}}
+      </li>
+    </ul>
+    <div class="list list-inset">
+<!--       <label class="item item-input">
         <input type="text" placeholder="Grouping" ng-model="$parent.formData.todo.group" required>
-      </label>
+      </label> -->
       <label class="item item-input">
         <input type="text" placeholder="Task" ng-model="$parent.formData.todo.task" required>
       </label>
       <button class="button button-block button-positive" ng-click="createTodo()">Create Task</button>
-    </div>  </ion-content>
+    </div>
+  </ion-content>
 </ion-view>
