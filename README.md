@@ -2,11 +2,11 @@
 
 ## What is the project about?
 
-This is the API for a full MEAN stack todo app.
+This is the Ionic frontend for a full MEAN stack todo app.
 
 ## What technologies does the project use?
 
-NPM, Node.js, Express.js, MongoDB, Mongoose, MongoLab, and Heroku.
+NPM, HTML5, CSS3, JavaScript, Ionic, and AngularJS.
 
 ## Download and install:
 
@@ -24,6 +24,7 @@ In your designated code directory, type:
 git clone https://github.com/Your-Username/honeyDoIonic
 cd honeyDoIonic
 npm install
+ionic serve
 ```
 
 Open with your favorite text editor and you should be ready to start coding.
