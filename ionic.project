@@ -4,7 +4,7 @@
   "proxies": [
     {
       "path": "/api",
-      "proxyUrl": "http://localhost:8080/api"
+      "proxyUrl": "https://mighty-coast-6578.herokuapp.com/api"
     }
   ]
 }
