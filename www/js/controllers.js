@@ -6,7 +6,7 @@ angular.module('honeyDo.controllers', [])
     $http.get('/api/todos/')
       .success(function(data) {
         $scope.todos = data;
-        console.log($scope.todos[2].todo[0].group);
+        // console.log($scope.todos[2].todo[0].group);
       })
       .error(function(data) {
         console.log('Error: ' + data);
@@ -15,10 +15,8 @@ angular.module('honeyDo.controllers', [])
     $scope.createTodo = function() {
       $http.post('/api/todos/', $scope.formData)
         .success(function(data) {
-          console.log($scope.formData);
           $scope.formData = {};
           $scope.todos = data;
-          console.log(data);
         })
         .error(function(data) {
           console.log('Error: ' + data);
@@ -29,7 +27,6 @@ angular.module('honeyDo.controllers', [])
       $http.delete('/api/todos/' + id)
         .success(function(data) {
           $scope.todos = data;
-          console.log(data);
         })
         .error(function(data) {
           console.log('Error: ' + data);
