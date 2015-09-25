@@ -25,7 +25,6 @@ angular.module('honeyDo', ['ionic', 'honeyDo.controllers'])
       templateUrl: 'templates/menu.html',
       controller: 'AppCtrl'
     })
-
     .state('app.todos', {
       url: '/todos',
       views: {
@@ -35,34 +34,15 @@ angular.module('honeyDo', ['ionic', 'honeyDo.controllers'])
         }
       }
     })
-
-    .state('app.browse', {
-        url: '/browse',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/browse.html'
-          }
-        }
-      })
-      .state('app.playlists', {
-        url: '/playlists',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/playlists.html',
-            controller: 'PlaylistsCtrl'
-          }
-        }
-      })
-
-    .state('app.single', {
-      url: '/playlists/:playlistId',
+    .state('app.landing', {
+      url: '/landing',
       views: {
         'menuContent': {
-          templateUrl: 'templates/playlist.html',
-          controller: 'PlaylistCtrl'
+          templateUrl: 'templates/landing.html',
+          controller: 'AppCtrl'
         }
       }
     });
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/todos');
+    $urlRouterProvider.otherwise('/app/landing');
   });
